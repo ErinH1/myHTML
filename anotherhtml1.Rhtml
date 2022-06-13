@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A minimal knitr example in HTML</title>
+      <link rel="stylesheet" href="my1.css">
+</head>
+<body>
+ 
+  <!-- Tab links -->
+  <div class="part1">
+<div class="tab">
+<button class="tablinks" onClick="location.href='my2a.html'">London</button> 
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+  </div>
+  
+
+<!--begin.rcode
+  knitr::opts_chunk$set(fig.width=5, fig.height=5)
+  end.rcode-->
+  
+
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3><a href="my2a.html">London</a></h3>
+  <p>London is the capital city of England.</p>
+  <p>We are a <a href="http://www.google.com">team</a> of professionals working
+         hard to provide free learning content.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+
+  <p>This is a minimal example that shows
+  how <strong>knitr</strong> works with pure HTML
+  pages.</p>
+
+  <p>Boring stuff as usual:</p>
+
+<!--begin.rcode
+    # a simple calculator
+    1 + 1
+    # boring random numbers
+    set.seed(123)
+    rnorm(5)
+    end.rcode-->
+
+  <p>We can also produce plots (centered by the
+  option <code>fig.align='center'</code>):</p>
+
+<!--begin.rcode cars-scatter, fig.align='center'
+    plot(mpg ~ hp, data = mtcars)
+    end.rcode-->
+
+  <p>Errors, messages and warnings can be put into
+  <code>div</code>s with different <code>class</code>es:</p>
+
+<!--begin.rcode
+    sqrt(-1)  # warning
+    message('knitr says hello to HTML!')
+    1 + 'a'  # mission impossible
+    end.rcode-->
+
+  <p>Well, everything seems to be working. Let's ask R what is
+  the value of &pi;? Of course it is <!--rinline pi -->.</p>
+
+
+
+</body>
+</html>

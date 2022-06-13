@@ -1,0 +1,23 @@
+---
+title: "another test for html"
+output: html_document
+css: "my1.css"
+---
+
+<h1>My House</h1>
+
+  <p>How to move back and forth</p>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+  ```{r}
+  2*pi
+  ```
+  
+  
+  <a href="htmlrmark1.html">Return to original page</a>
+</body>
+</html>
+

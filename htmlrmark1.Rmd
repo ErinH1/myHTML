@@ -1,0 +1,71 @@
+---
+title: "test for html"
+output: html_document
+css: "my1.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r klippy, echo=FALSE, include=TRUE}
+klippy::klippy(position=c("top","right"))
+```
+ <div class="part1">
+<div class="tab">
+<button class="tablinks button" onClick="location.href='my2.html'">Test for movement</button> 
+ </div>
+  </div>
+
+
+## R Markdown
+
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+<ul id="ProjectSubmenu">
+    <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
+    <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
+    <li><a class="selected" title="Markdown Syntax Documentation">Syntax</a></li>
+    <li><a href="/projects/markdown/license" title="Pricing and License Information">License</a></li>
+    <li><a href="/projects/markdown/dingus" title="Online Markdown Web Form">Dingus</a></li>
+</ul>
+
+
+*   [Overview](#overview)
+    *   [Philosophy](#philosophy)
+    *   [Inline HTML](#html)
+    *   [Automatic Escaping for Special Characters](#autoescape)
+*   [Block Elements](#block)
+    *   [Paragraphs and Line Breaks](#p)
+    *   [Headers](#header)
+    *   [Blockquotes](#blockquote)
+    *   [Lists](#list)
+    *   [Code Blocks](#precode)
+    *   [Horizontal Rules](#hr)
+*   [Span Elements](#span)
+    *   [Links](#link)
+    *   [Emphasis](#em)
+    *   [Code](#code)
+    *   [Images](#img)
+*   [Miscellaneous](#misc)
+    *   [Backslash Escapes](#backslash)
+    *   [Automatic Links](#autolink)
+
